@@ -1,3 +1,4 @@
+@use "../globalStyles/_mixins" as m;
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
 
 header {
@@ -40,6 +41,50 @@ header {
       > * {
         padding: 0.5rem 0.7rem;
         cursor: pointer;
+      }
+    }
+  }
+
+  @include m.tablet {
+    .nav {
+      width: 90%;
+      margin: auto;
+      justify-content: space-between;
+
+      .main-nav {
+        width: 100%;
+        padding: 0.9rem 0;
+      }
+
+      .menus {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @include m.mobile {
+    .nav {
+      width: 90%;
+      margin: auto;
+      justify-content: space-between;
+
+      .main-nav {
+        width: 100%;
+        padding: 0.9rem 0;
+      }
+
+      .menus {
+        padding-left: 0;
+
+        .home {
+          display: initial;
+          color: #258bf7;
+          font-weight: 700;
+        }
+
+        :not(:nth-child(1), :nth-child(2), :nth-child(3)) {
+          display: none;
+        }
       }
     }
   }
