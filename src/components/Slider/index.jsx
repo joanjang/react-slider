@@ -6,7 +6,7 @@ import { useState, useLayoutEffect, useEffect, useCallback } from "react";
 import MoveButton from "../MoveButton";
 import Description from "./Description";
 
-const BASE_BANNER_PATH = `${process.env.PUBLIC_URL}/resource/banner/`;
+const BASE_BANNER_PATH = `${process.env.PUBLIC_URL}/assets/banner/`;
 const Slider = () => {
   const offset = 3;
   const [slideIndex, setSlideIndex] = useState(0);
