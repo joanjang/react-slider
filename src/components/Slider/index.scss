@@ -46,7 +46,39 @@
 }
 
 @include m.tablet {
+  .slider-container {
+    padding-top: 9rem;
+
+    .slider-banner {
+      height: 13rem;
+
+      &.main {
+        width: 90%;
+        margin: 0 1.5rem;
+      }
+
+      &:not(.main) {
+        width: 5%;
+      }
+    }
+  }
 }
 
 @include m.mobile {
+  .slider-container {
+    padding-top: 9rem;
+
+    .slider-banner {
+      height: 13rem;
+
+      &.main {
+        width: 90%;
+        margin: 0 1rem;
+      }
+
+      &:not(.main) {
+        width: 5%;
+      }
+    }
+  }
 }

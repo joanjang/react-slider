@@ -31,7 +31,42 @@
 }
 
 @include m.tablet {
+  .description-container {
+    position: initial;
+    box-shadow: initial;
+    align-items: center;
+    width: 100%;
+
+    .title {
+      padding-bottom: 0;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    .link {
+      padding: 0.9rem;
+      border-top: initial;
+    }
+  }
 }
 
 @include m.mobile {
+  .description-container {
+    position: initial;
+    box-shadow: initial;
+    align-items: center;
+    width: 100%;
+
+    .title {
+      padding-bottom: 0;
+      text-align: center;
+      font-size: 0.7rem;
+      white-space: nowrap;
+    }
+
+    .link {
+      padding: 0.9rem;
+      border-top: initial;
+    }
+  }
 }
