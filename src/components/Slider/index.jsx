@@ -1,7 +1,7 @@
 import "./index.scss";
 
 import banners from "./meta";
-import { useState, useLayoutEffect, useCallback } from "react";
+import { useState, useLayoutEffect, useEffect, useCallback } from "react";
 
 import MoveButton from "../MoveButton";
 import Description from "./Description";
@@ -18,6 +18,21 @@ const Slider = () => {
     [slideIndex, lastSlideIndex]
   );
 
+  const moveSlider = useCallback(
+    (isLeft) => {
+      setSlideIndex((prev) =>
+        isLeft
+          ? isFirstIndex()
+            ? lastSlideIndex
+            : prev - 1
+          : isLastIndex()
+          ? 0
+          : prev + 1
+      );
+    },
+    [isFirstIndex, isLastIndex, lastSlideIndex]
+  );
+
   useLayoutEffect(() => {
     if (isFirstIndex())
       return setSlider([
@@ -32,17 +47,13 @@ const Slider = () => {
     return setSlider(banners.slice(slideIndex - 1, offset + slideIndex - 1));
   }, [slideIndex, isFirstIndex, isLastIndex, lastSlideIndex]);
 
-  const moveSlider = (isLeft) => {
-    setSlideIndex((prev) =>
-      isLeft
-        ? isFirstIndex()
-          ? lastSlideIndex
-          : prev - 1
-        : isLastIndex()
-        ? 0
-        : prev + 1
-    );
-  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      moveSlider(false);
+    }, 1000 * 4);
+
+    return () => clearInterval(timer);
+  }, [moveSlider]);
 
   return (
     <main className="slider-container">
