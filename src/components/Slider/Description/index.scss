@@ -1,4 +1,5 @@
-@use "../../globalStyles/_mixins" as m;
+@use "../../globalStyles/mixins" as m;
+@use "../../globalStyles/variables" as v;
 
 .description-container {
   position: absolute;
@@ -20,7 +21,7 @@
   .link {
     padding: 1.4rem;
     font-weight: 600;
-    color: #258bf7;
+    color: v.$accecntColor;
     border-top: 1px solid #ececec;
     cursor: pointer;
 

@@ -1,4 +1,5 @@
 {
+  "name": "react-silder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,8 +23,6 @@
     "deploy": "gh-pages -d build",
     "pull": "git pull origin master"
   },
-  "homepage": "http://je0489.github.io/react-slider",
-  "bugs": "http://github.com/je0489/react-slider/issues",
   "eslintConfig": {
     "extends": [
       "react-app",

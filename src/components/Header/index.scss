@@ -1,4 +1,5 @@
-@use "../globalStyles/_mixins" as m;
+@use "../globalStyles/mixins" as m;
+@use "../globalStyles/variables" as v;
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
 
 header {
@@ -78,7 +79,7 @@ header {
 
         .home {
           display: initial;
-          color: #258bf7;
+          color: v.$accecntColor;
           font-weight: 700;
         }
 
