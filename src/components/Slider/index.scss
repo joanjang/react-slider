@@ -1,0 +1,52 @@
+@use "../globalStyles/_mixins" as m;
+
+.slider-container {
+  display: flex;
+  position: relative;
+  padding-top: 5.5rem;
+
+  .slider-banner {
+    position: relative;
+    height: 20rem;
+
+    &.main {
+      width: 80%;
+      margin: 0 2rem;
+    }
+
+    &:not(.main) {
+      width: 10%;
+      filter: brightness(0.4);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &.main img {
+      border-radius: 1.2rem;
+    }
+
+    &:not(.main) {
+      &:first-child img {
+        border-top-right-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+        object-position: right;
+      }
+
+      &:nth-child(3) img {
+        border-top-left-radius: 1.2rem;
+        border-bottom-left-radius: 1.2rem;
+        object-position: left;
+      }
+    }
+  }
+}
+
+@include m.tablet {
+}
+
+@include m.mobile {
+}
