@@ -1,0 +1,17 @@
+@use "../globalStyles/_mixins" as m;
+
+.main-container {
+  padding-top: 5.5rem;
+}
+
+@include m.tablet {
+  .main-container {
+    padding-top: 9rem;
+  }
+}
+
+@include m.mobile {
+  .main-container {
+    padding-top: 9rem;
+  }
+}

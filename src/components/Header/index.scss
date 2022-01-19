@@ -20,7 +20,6 @@ header {
     flex-wrap: wrap;
 
     .main-nav {
-      font-size: 1.2rem;
       cursor: pointer;
 
       &::after {
@@ -43,6 +42,10 @@ header {
         padding: 0.5rem 0.7rem;
         cursor: pointer;
       }
+    }
+
+    [class*="fa"] {
+      font-size: 1.2rem;
     }
   }
 

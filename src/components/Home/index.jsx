@@ -1,12 +1,12 @@
-import Header from "../Header";
+import "./index.scss";
+
 import Slider from "../Slider";
 
 const Home = () => {
   return (
-    <>
-      <Header />
+    <main className="main-container">
       <Slider />
-    </>
+    </main>
   );
 };
 

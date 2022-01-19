@@ -56,7 +56,7 @@ const Slider = () => {
   }, [moveSlider]);
 
   return (
-    <main className="slider-container">
+    <div className="slider-container">
       {slider.map(({ filename, title, desc }, idx) => (
         <div key={idx} className={`slider-banner${idx === 1 ? " main" : ""}`}>
           <img src={`${BASE_BANNER_PATH}${filename}`} alt={title} />
@@ -65,7 +65,7 @@ const Slider = () => {
       ))}
       <MoveButton direction="left" onClick={moveSlider} />
       <MoveButton direction="right" onClick={moveSlider} />
-    </main>
+    </div>
   );
 };
 
